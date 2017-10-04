@@ -1,0 +1,46 @@
+/* ---------- */
+/* ---MAIN--- */
+/* ---------- */
+
+/* MAIN */
+
+main {
+    grid-area: maincontent;
+}
+
+main h3, main article, main div, main section {
+    background-color: ghostwhite;
+    margin: 10px;
+    padding: 10px;
+}
+
+main h3 {
+    font-size: 24px;
+}
+
+main h4 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+/* ---------------------- */
+/* ---ARTICLE SPECIFIC--- */
+/* ---------------------- */
+
+.nth2colortable01 {
+    text-align: left;
+    margin: 10px 0;
+    background-color: #b2b0b0;
+}
+
+.nth2colortable01 tr:nth-child(even) {
+    background-color: ghostwhite;
+}
+
+#imgfloatright33 {
+    float: right;
+    width: 33%;
+    padding: 0;
+    margin: 0;
+}

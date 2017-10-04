@@ -1,0 +1,227 @@
+@import url("normalize.css");
+@import url("main_and_articles.css");
+@import url('https://fonts.googleapis.com/css?family=Play');
+
+/* MARGIN/PADDING FIX */
+
+body, body * {
+    margin: 0;
+    padding: 0;
+}
+
+/* BOX-SIZING FIX */
+
+body * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+div, header, nav, main, footer, aside, article, section {
+    display: block;
+    overflow: hidden;
+}
+
+/* ------------- */
+/* ---GENERAL--- */
+/* ------------- */
+
+* {
+    font-family: 'Play', sans-serif;
+}
+
+html {
+    background-image: url("../img/bg.png");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body {
+    background-color: #b2b0b0;
+    min-height: 200vh;
+    max-width: 1200px;
+    min-width: 600px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 180px 60px auto 60px 120px;
+    grid-template-areas:    
+        "navsideheader headermain"
+        "headersticky headersticky"
+        "navside maincontent"
+        "footersticky footersticky"
+        "navsidefooter footersub";
+}
+
+/* FONTS */
+
+h1, h2, h3, h4, h5, h6 {
+    
+}
+
+p, a, div {
+    
+}
+
+/* LINK COLOUR */
+
+
+
+/* -------------- */
+/* ---ELEMENTS--- */
+/* -------------- */
+
+/* HEADER */
+
+#headermain {
+    grid-area: headermain;
+    margin: auto 20px;
+    color: #43484c;
+}
+
+#headermain h1 {
+    font-size: 60px;
+}
+
+#headermain h2 {
+    font-size: 30px;
+}
+
+/* NAV SIDE */
+
+.navside {
+    background-color: #43484c;
+    margin-left: 40px;
+}
+
+#navsideheader {
+    grid-area: navsideheader;
+    color: ghostwhite;
+}
+
+#navsideheader a div {
+    margin: auto;
+    height: 100%;
+}
+
+#navside {
+    grid-area: navside;
+    font-size: 20px;
+    padding-top: 20px;
+    color: #f99e1a;
+}
+
+#navside p, #navside a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    height: 40px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#navside a:link, #navside a:visited {
+    color: ghostwhite;
+}
+
+#navside a:hover {
+    background-color: #f99e1a;
+    color: black;
+}
+
+#navside a:active {
+    background-color: #ffc70e;
+    color: black;
+}
+
+#navsidefooter {
+    grid-area: navsidefooter
+}
+
+/* STICKY BARS */
+
+.ulsticky {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.crossbutton {
+    width: 260px;
+    margin-left: 40px;
+}
+
+.ulstickyleft {
+    float: left;
+}
+
+.ulstickyright {
+    float: right;
+    margin-right: 10px;
+}
+
+.ulsticky li {
+    display: inline-block;
+}
+
+.ulsticky a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    height: 60px;
+    padding: 20px 10px;
+    font-size: 18px;
+}
+
+.ulsticky a:link, .ulsticky a:visited {
+    color: #43484c;
+}
+
+.ulsticky a:hover {
+    background-color: #43484c;
+    color: ghostwhite;
+}
+
+.ulsticky a:active {
+    background-color: #43484c;
+    color: #00c3ff;
+}
+
+/* HEADER STICKY */
+
+#headersticky {
+    grid-area: headersticky;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #f99e1a;
+}
+
+/* FOOTER STICKY */
+
+#footersticky {
+    grid-area: footersticky;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    background-color: #f99e1a;
+}
+
+/* FOOTER SUB  */
+
+#footer {
+    grid-area: footersub;
+    margin: 10px;
+    color: #43484c;
+} 
+
+#legalstuff {
+    font-size: 14px;
+    width: 66%;
+}
+
+#contactinfo {
+    float: right;
+    text-align: right;
+}
+
